@@ -16,7 +16,7 @@ while True:
         link = f"https://steamcommunity.com/market/itemordershistogram?country=RU&language=russian&currency={currency}&item_nameid={item_id}"
 
         req = requests.get(link)
-        req.raise_for_status()  # Проверка на ошибки HTTP
+        req.raise_for_status() 
 
         js = json.loads(req.content)
         searched_tag = js["sell_order_summary"]
